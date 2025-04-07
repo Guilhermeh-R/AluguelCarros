@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel de Aluguéis</title>
+  <link rel="stylesheet" href="../css/home.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>🏠 Painel</h2>
+      <nav>
+        <button onclick="openModal('contratanteModal')">+ Contratante</button>
+        <button onclick="openModal('carroModal')">+ Carro</button>
+        <button onclick="openModal('aluguelModal')">+ Aluguel</button>
+      </nav>
+    </aside>
+
+    <!-- Conteúdo Principal -->
+    <main class="content">
+      <header>
+        <h1>📋 Aluguéis Ativos</h1>
+      </header>
+      <ul id="aluguel-list"></ul>
+    </main>
+  </div>
+
+  <!-- MODAL: Contratante -->
+  <div class="modal" id="contratanteModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('contratanteModal')">&times;</span>
+      <h2>Cadastro de Contratante</h2>
+      <input type="text" placeholder="Nome" id="nomeContratante" />
+      <input type="text" placeholder="CPF" id="cpfContratante" />
+      <input type="text" placeholder="Profissão" id="profissaoContratante" />
+      <input type="text" placeholder="Entidade" id="entidadeContratante" />
+      <button onclick="salvarContratante()">Salvar</button>
+    </div>
+  </div>
+
+  <!-- MODAL: Carro -->
+  <div class="modal" id="carroModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('carroModal')">&times;</span>
+      <h2>Cadastro de Automóvel</h2>
+      <input type="text" placeholder="Modelo" id="modeloCarro" />
+      <input type="number" placeholder="Ano" id="anoCarro" />
+      <input type="text" placeholder="Placa" id="placaCarro" />
+      <button onclick="salvarCarro()">Salvar</button>
+    </div>
+  </div>
+
+  <!-- MODAL: Aluguel -->
+  <div class="modal" id="aluguelModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('aluguelModal')">&times;</span>
+      <h2>Cadastro de Aluguel</h2>
+      <input type="date" id="dataInicio" />
+      <input type="date" id="dataFim" />
+      <input type="text" placeholder="Nº Registro" id="registro" />
+      <input type="number" placeholder="ID Automóvel" id="autoId" />
+      <input type="number" placeholder="ID Contratante" id="contratanteId" />
+      <button onclick="salvarAluguel()">Salvar</button>
+    </div>
+  </div>
+
+  <script src="../js/home.js"></script>
+</body>
+</html>

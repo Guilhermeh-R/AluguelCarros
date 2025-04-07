@@ -1,4 +1,4 @@
-package com.example.aluguel.Model;
+package com.example.aluguel.model;
 import java.util.Date;
 
 public class Aluguel{

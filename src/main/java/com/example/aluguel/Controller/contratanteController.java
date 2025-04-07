@@ -45,6 +45,10 @@ public class contratanteController {
     public ResponseEntity<?> updateContratante(@RequestBody Contratante contratante) {
         return contratanteService.updateContratante(contratante);
     }
+    @PostMapping("/delete")
+    public ResponseEntity<?> deleteContratante(@RequestParam int id) {
+        return contratanteService.deleteContratante(id);
+    }
     
     
     
