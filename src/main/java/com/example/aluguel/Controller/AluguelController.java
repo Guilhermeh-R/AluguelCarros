@@ -25,7 +25,7 @@ public class AluguelController {
     public List<Aluguel> getAllAlugueis() {
         return aluguelService.getAllAlugueis();
     }
-    @GetMapping("/id")
+    @GetMapping("/{id}")
     public Aluguel getAluguelById(@RequestParam int id) {
         return aluguelService.getAluguelById(id);
     }

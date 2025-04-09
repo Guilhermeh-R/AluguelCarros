@@ -20,7 +20,7 @@ public class AutomovelController {
     public AutomovelController(AutomovelService automovelService) {
         this.automovelService = automovelService;
     }
-    @GetMapping("/id")
+    @GetMapping("/{id}")
     public Automovel getAutomovelById(@RequestParam int id) {
         return automovelService.getAutomovelById(id);
     }
